@@ -8,7 +8,7 @@ defmodule Cards do
   """
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
-    suits = ["Spaces", "Clubs", "Hearts", "Diamonds"]
+    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
     for suit <- suits, value <- values do
       "#{value} of #{suit}"
@@ -20,8 +20,16 @@ defmodule Cards do
     Enum.shuffle(deck)
   end
 
-  def contains?(deck, hand) do
-    Enum.member?(deck, hand)
+  @doc """
+    Determinate whether a deck contains a given card.
+
+    ## Examples
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+  """
+  def contains?(deck, card) do
+    Enum.member?(deck, card)
   end
 
   @doc """
@@ -31,9 +39,9 @@ defmodule Cards do
 
     ## Examples
       iex> deck = Cards.create_deck
-      iex> {hand, deck} = Cards.deal(deck, 3)
+      iex> {hand, _deck} = Cards.deal(deck, 3)
       iex> hand
-      ["Ace of Spaces", "Two of Spaces", "Three of Spaces"]
+      ["Ace of Spades", "Two of Spades", "Three of Spades"]
   """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
