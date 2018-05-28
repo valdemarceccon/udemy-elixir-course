@@ -1,6 +1,8 @@
 # Cards
 
-**TODO: Add description**
+Inicial project, developed in the udemy elixir and phoenix course.
+
+For each commit/step in this project was added a tag, to help myself in the future to find specifics points, if needed.
 
 ## Installation
 
