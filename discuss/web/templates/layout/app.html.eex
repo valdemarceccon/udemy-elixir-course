@@ -27,7 +27,7 @@
             </li>
           <% else %>
             <li>
-              <%= link "Sign in with Github", to: auth_path(@conn, :request, "github") %>
+              <%= link "Sign in with Google", to: auth_path(@conn, :request, "google") %>
             </li>
           <% end %>
         </ul>
