@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :discuss, Discuss.Endpoint,
   http: [port: 4000],
-  url: [host: "valdemarceccon.com.br/discuss", port: 80],
+  url: [host: "valdemarceccon.com.br", port: 80, path: "/discuss"],
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
   code_reloader: false
